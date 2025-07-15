@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Pourquoi la programmation ? | Guide R</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Pourquoi la programmation ? | Guide R" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="https://github.com/meganebollen/meganebollen.github.io" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Pourquoi la programmation ? | Guide R" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="Prof. Audrey Bürki, Samuel Arthers, Mégane Bollenrücher" />
+
+
+<meta name="date" content="2025-07-15" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introduction.html"/>
+<link rel="next" href="dabord-créez-une-table-de-données-simple-avec-des-nombres-et-enregistrez-la-en-csv.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="toc-logo"><a href="./"><img src="images/logo_unil.png"></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="pourquoi-la-programmation.html"><a href="pourquoi-la-programmation.html"><i class="fa fa-check"></i><b>2</b> Pourquoi la programmation ?</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="pourquoi-la-programmation.html"><a href="pourquoi-la-programmation.html#exemples-de-programmation-en-r"><i class="fa fa-check"></i><b>2.1</b> Exemples de programmation en R</a></li>
+<li class="chapter" data-level="2.2" data-path="pourquoi-la-programmation.html"><a href="pourquoi-la-programmation.html#concepts-de-base"><i class="fa fa-check"></i><b>2.2</b> Concepts de base</a></li>
+<li class="chapter" data-level="2.3" data-path="01-intro.html"><a href="#acc%C3%A9der-%C3%A0-des-documents-externes-fichiers-csv-et-excel"><i class="fa fa-check"></i><b>2.3</b> Accéder à des documents externes : fichiers CSV et Excel</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="pourquoi-la-programmation.html"><a href="pourquoi-la-programmation.html#quest-ce-quun-fichier-csv"><i class="fa fa-check"></i><b>2.3.1</b> Qu’est-ce qu’un fichier CSV ?</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="01-intro.html"><a href="#dabord-cr%C3%A9ez-une-table-de-donn%C3%A9es-simple-avec-des-nombres-et-enregistrez-la-en-csv"><i class="fa fa-check"></i><b>3</b> D’abord, créez une table de données simple avec des nombres et enregistrez-la en CSV</a></li>
+<li class="chapter" data-level="4" data-path="maintenant-lisez-le-fichier-csv-dans-r.html"><a href="maintenant-lisez-le-fichier-csv-dans-r.html"><i class="fa fa-check"></i><b>4</b> Maintenant, lisez le fichier CSV dans R</a></li>
+<li class="chapter" data-level="5" data-path="installation-et-environnement-r-et-rstudio.html"><a href="installation-et-environnement-r-et-rstudio.html"><i class="fa fa-check"></i><b>5</b> Installation et environnement R et Rstudio</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="01-intro.html"><a href="#pr%C3%A9sentation-des-logiciels"><i class="fa fa-check"></i><b>5.1</b> Présentation des logiciels</a></li>
+<li class="chapter" data-level="5.2" data-path="installation-et-environnement-r-et-rstudio.html"><a href="installation-et-environnement-r-et-rstudio.html#installation"><i class="fa fa-check"></i><b>5.2</b> Installation</a></li>
+<li class="chapter" data-level="5.3" data-path="installation-et-environnement-r-et-rstudio.html"><a href="installation-et-environnement-r-et-rstudio.html#organiser-ses-fichiers"><i class="fa fa-check"></i><b>5.3</b> Organiser ses fichiers</a></li>
+<li class="chapter" data-level="5.4" data-path="01-intro.html"><a href="#r%C3%A9pertoire-de-travail"><i class="fa fa-check"></i><b>5.4</b> Répertoire de travail</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="01-intro.html"><a href="#d%C3%A9finir-son-r%C3%A9pertoire-de-travail-avec-setwd"><i class="fa fa-check"></i><b>5.4.1</b> Définir son répertoire de travail avec <em>setwd( )</em></a></li>
+<li class="chapter" data-level="5.4.2" data-path="installation-et-environnement-r-et-rstudio.html"><a href="installation-et-environnement-r-et-rstudio.html#projet-r"><i class="fa fa-check"></i><b>5.4.2</b> Projet R</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="installation-et-environnement-r-et-rstudio.html"><a href="installation-et-environnement-r-et-rstudio.html#environnement-de-travail"><i class="fa fa-check"></i><b>5.5</b> Environnement de travail</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="01-intro.html"><a href="#objets-et-op%C3%A9rateurs"><i class="fa fa-check"></i><b>6</b> Objets et opérateurs</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="objets-et-opérateurs.html"><a href="objets-et-opérateurs.html"><i class="fa fa-check"></i><b>6.1</b> Objets dans R</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="objets-et-opérateurs.html"><a href="objets-et-opérateurs.html#scalaire"><i class="fa fa-check"></i><b>6.1.1</b> Scalaire</a></li>
+<li class="chapter" data-level="6.1.2" data-path="objets-et-opérateurs.html"><a href="objets-et-opérateurs.html#vecteur"><i class="fa fa-check"></i><b>6.1.2</b> Vecteur</a></li>
+<li class="chapter" data-level="6.1.3" data-path="objets-et-opérateurs.html"><a href="objets-et-opérateurs.html#facteur"><i class="fa fa-check"></i><b>6.1.3</b> Facteur</a></li>
+<li class="chapter" data-level="6.1.4" data-path="objets-et-opérateurs.html"><a href="objets-et-opérateurs.html#matrice"><i class="fa fa-check"></i><b>6.1.4</b> Matrice</a></li>
+<li class="chapter" data-level="6.1.5" data-path="objets-et-opérateurs.html"><a href="objets-et-opérateurs.html#dataframe"><i class="fa fa-check"></i><b>6.1.5</b> Dataframe</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="01-intro.html"><a href="#op%C3%A9rateurs-logiques"><i class="fa fa-check"></i><b>6.2</b> Opérateurs logiques</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="01-intro.html"><a href="#packages-et-donn%C3%A9es"><i class="fa fa-check"></i><b>7</b> Packages et données</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="packages-et-données.html"><a href="packages-et-données.html"><i class="fa fa-check"></i><b>7.1</b> Installation et gestion des packages</a></li>
+<li class="chapter" data-level="7.2" data-path="01-intro.html"><a href="#t%C3%A9l%C3%A9chargement-des-donn%C3%A9es"><i class="fa fa-check"></i><b>7.2</b> Téléchargement des données</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="01-intro.html"><a href="#bases-de-donn%C3%A9es-issues-de-la-base-de-r-ou-des-packages"><i class="fa fa-check"></i><b>7.2.1</b> Bases de données issues de la base de R ou des packages</a></li>
+<li class="chapter" data-level="7.2.2" data-path="01-intro.html"><a href="#bases-de-donn%C3%A9es-issues-dans-un-fichier-.rdata"><i class="fa fa-check"></i><b>7.2.2</b> Bases de données issues dans un fichier .RData</a></li>
+<li class="chapter" data-level="7.2.3" data-path="01-intro.html"><a href="#bases-de-donn%C3%A9es-issues-de-fichiers-externes"><i class="fa fa-check"></i><b>7.2.3</b> Bases de données issues de fichiers externes</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="01-intro.html"><a href="#description-des-donn%C3%A9es-quantitatives-et-qualitatives"><i class="fa fa-check"></i><b>8</b> Description des données quantitatives et qualitatives</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="01-intro.html"><a href="#description-num%C3%A9rique"><i class="fa fa-check"></i><b>8.1</b> Description numérique</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="description-des-données-quantitatives-et-qualitatives.html"><a href="description-des-données-quantitatives-et-qualitatives.html"><i class="fa fa-check"></i><b>8.1.1</b> Variables qualitatives</a></li>
+<li class="chapter" data-level="8.1.2" data-path="description-des-données-quantitatives-et-qualitatives.html"><a href="description-des-données-quantitatives-et-qualitatives.html#variables-quantitatives"><i class="fa fa-check"></i><b>8.1.2</b> Variables quantitatives</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="description-des-données-quantitatives-et-qualitatives.html"><a href="description-des-données-quantitatives-et-qualitatives.html#description-graphique"><i class="fa fa-check"></i><b>8.2</b> Description graphique</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="description-des-données-quantitatives-et-qualitatives.html"><a href="description-des-données-quantitatives-et-qualitatives.html#variables-qualitatives-1"><i class="fa fa-check"></i><b>8.2.1</b> Variables qualitatives</a></li>
+<li class="chapter" data-level="8.2.2" data-path="description-des-données-quantitatives-et-qualitatives.html"><a href="description-des-données-quantitatives-et-qualitatives.html#variables-quantitatives-1"><i class="fa fa-check"></i><b>8.2.2</b> Variables quantitatives</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="01-intro.html"><a href="#distribution-de-probabilit%C3%A9s"><i class="fa fa-check"></i><b>9</b> Distribution de probabilités</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="distribution-de-probabilités.html"><a href="distribution-de-probabilités.html"><i class="fa fa-check"></i><b>9.1</b> Distribution normale</a></li>
+<li class="chapter" data-level="9.2" data-path="distribution-de-probabilités.html"><a href="distribution-de-probabilités.html#distribution-de-student"><i class="fa fa-check"></i><b>9.2</b> Distribution de Student</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="les-boucles-for.html"><a href="les-boucles-for.html"><i class="fa fa-check"></i><b>10</b> Les boucles FOR</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="les-boucles-for.html"><a href="les-boucles-for.html#structure"><i class="fa fa-check"></i><b>10.1</b> Structure</a></li>
+<li class="chapter" data-level="10.2" data-path="les-boucles-for.html"><a href="les-boucles-for.html#utilisation"><i class="fa fa-check"></i><b>10.2</b> Utilisation</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="les-boucles-for.html"><a href="les-boucles-for.html#afficher"><i class="fa fa-check"></i><b>10.2.1</b> Afficher</a></li>
+<li class="chapter" data-level="10.2.2" data-path="01-intro.html"><a href="#it%C3%A9rer"><i class="fa fa-check"></i><b>10.2.2</b> Itérer</a></li>
+<li class="chapter" data-level="10.2.3" data-path="01-intro.html"><a href="#cr%C3%A9er-un-vecteur"><i class="fa fa-check"></i><b>10.2.3</b> Créer un vecteur</a></li>
+<li class="chapter" data-level="10.2.4" data-path="les-boucles-for.html"><a href="les-boucles-for.html#parcourir-une-matrice"><i class="fa fa-check"></i><b>10.2.4</b> Parcourir une matrice</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="les-tests-statistiques.html"><a href="les-tests-statistiques.html"><i class="fa fa-check"></i><b>11</b> Les tests statistiques</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="01-intro.html"><a href="#le-test-de-student-pour-un-%C3%A9chantillon"><i class="fa fa-check"></i><b>11.1</b> Le test de Student pour un échantillon</a></li>
+<li class="chapter" data-level="11.2" data-path="01-intro.html"><a href="#le-test-de-student-pour-deux-%C3%A9chantillons-ind%C3%A9pendants"><i class="fa fa-check"></i><b>11.2</b> Le test de Student pour deux échantillons indépendants</a></li>
+<li class="chapter" data-level="11.3" data-path="01-intro.html"><a href="#le-test-de-student-pour-%C3%A9chantillons-appari%C3%A9s"><i class="fa fa-check"></i><b>11.3</b> Le test de Student pour échantillons appariés</a></li>
+<li class="chapter" data-level="11.4" data-path="les-tests-statistiques.html"><a href="les-tests-statistiques.html#la-puissance-dun-test-de-student"><i class="fa fa-check"></i><b>11.4</b> La puissance d’un test de Student</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="01-intro.html"><a href="#r%C3%A9gression-lin%C3%A9aire-simple"><i class="fa fa-check"></i><b>12</b> Régression linéaire simple</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="01-intro.html"><a href="#visualisation-du-lien-lin%C3%A9aire-entre-deux-variables"><i class="fa fa-check"></i><b>12.1</b> Visualisation du lien linéaire entre deux variables</a></li>
+<li class="chapter" data-level="12.2" data-path="régression-linéaire-simple.html"><a href="régression-linéaire-simple.html"><i class="fa fa-check"></i><b>12.2</b> Conditions d’application</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="01-intro.html"><a href="#relation-lin%C3%A9aire"><i class="fa fa-check"></i><b>12.2.1</b> Relation linéaire</a></li>
+<li class="chapter" data-level="12.2.2" data-path="01-intro.html"><a href="#donn%C3%A9es-ind%C3%A9pendantes"><i class="fa fa-check"></i><b>12.2.2</b> Données indépendantes</a></li>
+<li class="chapter" data-level="12.2.3" data-path="01-intro.html"><a href="#r%C3%A9sidus-distribu%C3%A9s-normalement"><i class="fa fa-check"></i><b>12.2.3</b> Résidus distribués normalement</a></li>
+<li class="chapter" data-level="12.2.4" data-path="01-intro.html"><a href="#homoscedasticit%C3%A9"><i class="fa fa-check"></i><b>12.2.4</b> Homoscedasticité</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="01-intro.html"><a href="#param%C3%A8tres-et-tests-dhypoth%C3%A8ses"><i class="fa fa-check"></i><b>12.3</b> Paramètres et tests d’hypothèses</a></li>
+<li class="chapter" data-level="12.4" data-path="régression-linéaire-simple.html"><a href="régression-linéaire-simple.html#standardiser-une-variable"><i class="fa fa-check"></i><b>12.4</b> Standardiser une variable</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Guide R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="pourquoi-la-programmation" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Pourquoi la programmation ?<a href="pourquoi-la-programmation.html#pourquoi-la-programmation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>La programmation est le processus qui consiste à donner des instructions à un ordinateur afin qu’il puisse effectuer des tâches. Ces instructions sont écrites dans un langage que l’ordinateur peut comprendre. Le langage R, utilisé dans ce cours, est un langage de programmation couramment utilisé pour les statistiques et l’analyse de données.</p>
+<p>Pour les statistiques et la psychologie, programmer en R offre de nombreuses possibilités, bien plus que les logiciels classiques d’analyse de données :
+- Automatiser les tâches répétitives d’analyse de données en recherche psychologique
+- Analyser et visualiser efficacement les données issues d’expériences et d’enquêtes
+- Reproduire et partager les analyses pour assurer la transparence dans les études psychologiques
+- Appliquer des méthodes statistiques pour répondre à des questions de recherche en psychologie</p>
+<p>Vous pouvez considérer R comme une calculatrice très avancée qui vous permet, avec des connaissances, de réaliser n’importe quelle opération sur vos données et de créer n’importe quelle visualisation pour accompagner vos résultats.</p>
+<div id="exemples-de-programmation-en-r" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Exemples de programmation en R<a href="pourquoi-la-programmation.html#exemples-de-programmation-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Voici une commande R simple qui additionne deux nombres :</p>
+<p>2 + 3</p>
+<p>Un des concepts de base est celui des variables. Les variables stockent des informations pour une utilisation ultérieure et peuvent être modifiées au cours du code, par exemple :</p>
+<p>a &lt;- 2
+b &lt;- 3
+a + b</p>
+<p>Si on modifie une variable, cela change le résultat :</p>
+<p>b &lt;- 4
+a + b</p>
+<p>Cela peut être très utile si, par exemple, vous souhaitez mettre à jour la variable. Par exemple, simulons un individu qui vieillit au fil des années :</p>
+<p>age &lt;- 0
+for (annee in 1:18) {
+age &lt;- age + 1
+print(age)
+if (age == 18) {
+print(“ça y est je suis majeur”)
+}
+}</p>
+</div>
+<div id="concepts-de-base" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Concepts de base<a href="pourquoi-la-programmation.html#concepts-de-base" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><strong>Variables</strong> : Stockent des informations (comme des nombres ou du texte).</li>
+<li><strong>Fonctions</strong> : Effectuent des tâches spécifiques.</li>
+<li><strong>Commandes</strong> : Disent à l’ordinateur quoi faire.</li>
+</ul>
+</div>
+<div id="accéder-à-des-documents-externes-fichiers-csv-et-excel" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Accéder à des documents externes : fichiers CSV et Excel<a href="#acc%C3%A9der-%C3%A0-des-documents-externes-fichiers-csv-et-excel" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Souvent, les données sont stockées dans des fichiers externes tels que des fichiers CSV ou des feuilles de calcul Excel. Ces fichiers peuvent être importés dans R pour analyse.</p>
+<div id="quest-ce-quun-fichier-csv" class="section level3 hasAnchor" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> Qu’est-ce qu’un fichier CSV ?<a href="pourquoi-la-programmation.html#quest-ce-quun-fichier-csv" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Un <strong>CSV (Comma-Separated Values)</strong> est un fichier texte où chaque ligne représente une ligne de données, et les colonnes sont séparées par des virgules. Les fichiers CSV sont largement utilisés pour stocker des données tabulaires.</p>
+<div id="lire-un-fichier-csv-dans-r" class="section level4 hasAnchor" number="2.3.1.1">
+<h4><span class="header-section-number">2.3.1.1</span> Lire un fichier CSV dans R<a href="pourquoi-la-programmation.html#lire-un-fichier-csv-dans-r" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="dabord-créez-une-table-de-données-simple-avec-des-nombres-et-enregistrez-la-en-csv.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": false,
+    "twitter": false,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": {}
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": null,
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["_main.pdf"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -8,7 +8,7 @@
   <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
-  <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 9 Régression linéaire simple | Guide R" />
   <meta property="og:type" content="book" />
@@ -29,7 +29,7 @@ set in the _output.yml file.</p>" />
 <meta name="author" content="Prof. Audrey Bürki, Samuel Arthers, Mégane Bollenrücher" />
 
 
-<meta name="date" content="2025-05-23" />
+<meta name="date" content="2025-07-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -146,7 +146,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="toc-logo"><a href="./"><img src="images/logo_unil.png"></a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#pourquoi-la-programmation"><i class="fa fa-check"></i><b>1.1</b> Pourquoi la programmation ?</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#exemples-de-programmation-en-r"><i class="fa fa-check"></i><b>1.2</b> Exemples de programmation en R</a></li>
+</ul></li>
 <li class="chapter" data-level="2" data-path="installation-et-environnement-r-et-rstudio.html"><a href="installation-et-environnement-r-et-rstudio.html"><i class="fa fa-check"></i><b>2</b> Installation et environnement R et Rstudio</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="09-regression.html"><a href="#pr%C3%A9sentation-des-logiciels"><i class="fa fa-check"></i><b>2.1</b> Présentation des logiciels</a></li>
@@ -263,16 +267,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="visualisation-du-lien-linéaire-entre-deux-variables" class="section level2 hasAnchor" number="9.1">
 <h2><span class="header-section-number">9.1</span> Visualisation du lien linéaire entre deux variables<a href="#visualisation-du-lien-lin%C3%A9aire-entre-deux-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Afin de visualiser la nature du lien entre deux variables continues et vérifier si ce lien est linéaire, nous vous proposons de construire un diagramme de dispersion. Cette représentation graphique a deux axes: la variable indépendante sur l’axe des x et la variable dépendante sur l’axe des y.</p>
-<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb238-1"><a href="régression-linéaire-simple.html#cb238-1" tabindex="-1"></a><span class="co"># Par exemple, le diagramme de dispersion entre la vitesse d&#39;une voiture (x = speed) et sa distance de freinage (y = dist)</span></span>
-<span id="cb238-2"><a href="régression-linéaire-simple.html#cb238-2" tabindex="-1"></a><span class="fu">plot</span>(dist <span class="sc">~</span> speed, <span class="at">data =</span> cars)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-93-1.png" width="672" /></p>
+<div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb248-1"><a href="régression-linéaire-simple.html#cb248-1" tabindex="-1"></a><span class="co"># Par exemple, le diagramme de dispersion entre la vitesse d&#39;une voiture (x = speed) et sa distance de freinage (y = dist)</span></span>
+<span id="cb248-2"><a href="régression-linéaire-simple.html#cb248-2" tabindex="-1"></a><span class="fu">plot</span>(dist <span class="sc">~</span> speed, <span class="at">data =</span> cars)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-98-1.png" width="672" /></p>
 <p>Les modèles de régression linéaire vont calculer et estimer la meilleure droite qui passe au milieu des données de telle sorte que cette droite représente la relation entre les deux variables. La fonction <em>lm( )</em> dans R calcule la pente et l’intercept de cette droite.</p>
-<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb239-1"><a href="régression-linéaire-simple.html#cb239-1" tabindex="-1"></a>m1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(dist <span class="sc">~</span> speed, <span class="at">data =</span> cars)</span></code></pre></div>
+<div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb249-1"><a href="régression-linéaire-simple.html#cb249-1" tabindex="-1"></a>m1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(dist <span class="sc">~</span> speed, <span class="at">data =</span> cars)</span></code></pre></div>
 <p>Le code suivant permet, une fois le modèle de régression calculé et stocké dans un objet (par exemple m1), de dessiner la droite de régression sur le diagrame de dispersion. Attention, il faut pour cela lancer les deux lignes de code en même temps.</p>
-<div class="sourceCode" id="cb240"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb240-1"><a href="régression-linéaire-simple.html#cb240-1" tabindex="-1"></a><span class="co"># pour notre exemple :</span></span>
-<span id="cb240-2"><a href="régression-linéaire-simple.html#cb240-2" tabindex="-1"></a><span class="fu">plot</span>(dist<span class="sc">~</span>speed,<span class="at">data=</span>cars)</span>
-<span id="cb240-3"><a href="régression-linéaire-simple.html#cb240-3" tabindex="-1"></a><span class="fu">abline</span>(m1)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-95-1.png" width="672" /></p>
+<div class="sourceCode" id="cb250"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb250-1"><a href="régression-linéaire-simple.html#cb250-1" tabindex="-1"></a><span class="co"># pour notre exemple :</span></span>
+<span id="cb250-2"><a href="régression-linéaire-simple.html#cb250-2" tabindex="-1"></a><span class="fu">plot</span>(dist<span class="sc">~</span>speed,<span class="at">data=</span>cars)</span>
+<span id="cb250-3"><a href="régression-linéaire-simple.html#cb250-3" tabindex="-1"></a><span class="fu">abline</span>(m1)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-100-1.png" width="672" /></p>
 </div>
 <div id="conditions-dapplication" class="section level2 hasAnchor" number="9.2">
 <h2><span class="header-section-number">9.2</span> Conditions d’application<a href="régression-linéaire-simple.html#conditions-dapplication" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -303,23 +307,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><strong>Par exemple, la représentation, en rouge, du résidu (ou residual) d’une des observation d’un modèle de régression linéaire.</strong></p>
 <p><img src="images/residuals.png" /><!-- --></p>
 <p>Ensuite, afin de pouvoir mesurer et observer les résidus, il faut d’abord définir votre modèle de régression à l’aide de la fonction <em>lm( )</em>. Ensuite, afin de connaître les valeurs des résidus, nous vous proposons d’utiliser la fonction <em>resid( ).</em></p>
-<div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb241-1"><a href="régression-linéaire-simple.html#cb241-1" tabindex="-1"></a>modele_1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(dist <span class="sc">~</span> speed, <span class="at">data =</span> cars) <span class="co"># définition du modèle de régression linéaire</span></span>
-<span id="cb241-2"><a href="régression-linéaire-simple.html#cb241-2" tabindex="-1"></a>residus <span class="ot">&lt;-</span> <span class="fu">resid</span>(modele_1) <span class="co"># calcul des résidus</span></span></code></pre></div>
+<div class="sourceCode" id="cb251"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb251-1"><a href="régression-linéaire-simple.html#cb251-1" tabindex="-1"></a>modele_1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(dist <span class="sc">~</span> speed, <span class="at">data =</span> cars) <span class="co"># définition du modèle de régression linéaire</span></span>
+<span id="cb251-2"><a href="régression-linéaire-simple.html#cb251-2" tabindex="-1"></a>residus <span class="ot">&lt;-</span> <span class="fu">resid</span>(modele_1) <span class="co"># calcul des résidus</span></span></code></pre></div>
 <p>Afin de vérifier la normalité de la distribution des erreurs/résidus, trois options s’offrent à vous.</p>
 <ol style="list-style-type: decimal">
 <li>Vous pouvez visualiser la distribution des résidus par un graphique de densité. <strong>Critère de décision</strong>: est-ce que cette distribution ressemble à une distribution normale centrée en 0?</li>
 </ol>
-<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb242-1"><a href="régression-linéaire-simple.html#cb242-1" tabindex="-1"></a><span class="co"># exemple de résidus distribués normalement</span></span>
-<span id="cb242-2"><a href="régression-linéaire-simple.html#cb242-2" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">density</span>(residus))</span></code></pre></div>
+<div class="sourceCode" id="cb252"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb252-1"><a href="régression-linéaire-simple.html#cb252-1" tabindex="-1"></a><span class="co"># exemple de résidus distribués normalement</span></span>
+<span id="cb252-2"><a href="régression-linéaire-simple.html#cb252-2" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">density</span>(residus))</span></code></pre></div>
 <p><img src="images/normality_residuals.png" /><!-- --></p>
-<div class="sourceCode" id="cb243"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb243-1"><a href="régression-linéaire-simple.html#cb243-1" tabindex="-1"></a><span class="co"># exemple de résidus qui ne sont pas tout à fait distribués normalement</span></span>
-<span id="cb243-2"><a href="régression-linéaire-simple.html#cb243-2" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">density</span>(residus2))</span></code></pre></div>
+<div class="sourceCode" id="cb253"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb253-1"><a href="régression-linéaire-simple.html#cb253-1" tabindex="-1"></a><span class="co"># exemple de résidus qui ne sont pas tout à fait distribués normalement</span></span>
+<span id="cb253-2"><a href="régression-linéaire-simple.html#cb253-2" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">density</span>(residus2))</span></code></pre></div>
 <p><img src="images/abnormality_residuals.png" /><!-- --></p>
 <ol start="2" style="list-style-type: decimal">
 <li>Vous pouvez également visualiser la normalité de la distribution des résidus par un QQplot. Un QQplot représente les résidus (sur l’axe des y) en fonction des valeurs théoriques des résidus si la distribution était parfaitement normale. <strong>Critère de décision</strong>: Est-ce que les points sont sur la diagonale.</li>
 </ol>
-<div class="sourceCode" id="cb244"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb244-1"><a href="régression-linéaire-simple.html#cb244-1" tabindex="-1"></a><span class="co"># mêmes exemples que ci-dessus, résidus distribués normalement</span></span>
-<span id="cb244-2"><a href="régression-linéaire-simple.html#cb244-2" tabindex="-1"></a><span class="fu">qqnorm</span>(residus)</span></code></pre></div>
+<div class="sourceCode" id="cb254"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb254-1"><a href="régression-linéaire-simple.html#cb254-1" tabindex="-1"></a><span class="co"># mêmes exemples que ci-dessus, résidus distribués normalement</span></span>
+<span id="cb254-2"><a href="régression-linéaire-simple.html#cb254-2" tabindex="-1"></a><span class="fu">qqnorm</span>(residus)</span></code></pre></div>
 <p><img src="images/QQplot.png" /><!-- --></p>
 <ol start="3" style="list-style-type: decimal">
 <li>Finalement, de manière intuitive, le diagramme de dispersion avec la droite de régression vous permet également d’avoir une idée de le distribution des résidus. La condition de normalité est respectée si il y a autant de résidus en haut et en bas de la droite, et que les résidus ne sont pas plus éloignés de la droite en haut qu’en bas (ou vice-versa)</li>
@@ -330,8 +334,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Finalement, il est essentiel que les résidus se distribuent de manière homogène pour toutes les valeurs de x. En d’autres termes, que la précision de la droite de régression reste la même pour toutes les valeurs de x. Afin de vérifier cette condition, vous allez visualer les données autour de la droite de régression et faire un graphique des résidus en fonction de votre variable indépendante (x). <strong>Critère de décision:</strong> est-ce que les résidus pourraient être contenus dans un rectangle (homoscédasticité) ou non (hétéroscédasticité).</p>
 <p><strong>Exemple 1 : Relation linéaire avec hétéroscedasticité (variance hétérogène)</strong></p>
 <p><img src="images/hetero_dis.png" /><!-- --></p>
-<div class="sourceCode" id="cb245"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb245-1"><a href="régression-linéaire-simple.html#cb245-1" tabindex="-1"></a><span class="fu">plot</span>(Stress, residuals) <span class="co"># graphique des résidus en fonction de x</span></span>
-<span id="cb245-2"><a href="régression-linéaire-simple.html#cb245-2" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb255"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb255-1"><a href="régression-linéaire-simple.html#cb255-1" tabindex="-1"></a><span class="fu">plot</span>(Stress, residuals) <span class="co"># graphique des résidus en fonction de x</span></span>
+<span id="cb255-2"><a href="régression-linéaire-simple.html#cb255-2" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
 <p><img src="images/hetero.png" /><!-- --></p>
 <p><strong>Exemple 2 : Comparaison entre homoscédasticité et hétéroscédasticité</strong></p>
 <p><img src="images/homo_hetero.png" /><!-- --></p>
@@ -342,8 +346,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">9.3</span> Paramètres et tests d’hypothèses<a href="#param%C3%A8tres-et-tests-dhypoth%C3%A8ses" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Si toutes les conditions d’application sont respectées, vous allez pouvoir interprêter les résultats de votre modèle de régression linéaire simple.</p>
 <p>En guise de rappel, pour spécifier votre modèle de régression vous allez utiliser la fonction <em>lm( )</em>. Ensuite, pour en observer les paramètres/résultats, vous allez utiliser la fonction <em>summary( )</em>.</p>
-<div class="sourceCode" id="cb246"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb246-1"><a href="régression-linéaire-simple.html#cb246-1" tabindex="-1"></a>modele_1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(dist <span class="sc">~</span> speed, <span class="at">data =</span> cars)</span>
-<span id="cb246-2"><a href="régression-linéaire-simple.html#cb246-2" tabindex="-1"></a><span class="fu">summary</span>(modele_1)</span></code></pre></div>
+<div class="sourceCode" id="cb256"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb256-1"><a href="régression-linéaire-simple.html#cb256-1" tabindex="-1"></a>modele_1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(dist <span class="sc">~</span> speed, <span class="at">data =</span> cars)</span>
+<span id="cb256-2"><a href="régression-linéaire-simple.html#cb256-2" tabindex="-1"></a><span class="fu">summary</span>(modele_1)</span></code></pre></div>
 <p><img src="images/parametres.png" /><!-- --></p>
 <p>En quelques mots, voici ce que représentent les différents indices et paramètres de votre sortie. Vous avez deux blocs principaux, un premier qui vous informe sur les paramètres du modèle (2:5), un second qui vous informe sur la validité du modèle (6:8).</p>
 <p><strong>Bloc 1 - Les paramètres de votre modèle</strong></p>
@@ -372,10 +376,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>réduire la variable - diviser chaque score par l’écart-type de la variable</p></li>
 </ul>
 <p>En d’autre mot, standardiser une variable est le même procédé qu’en calculer le score z.</p>
-<div class="sourceCode" id="cb247"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb247-1"><a href="régression-linéaire-simple.html#cb247-1" tabindex="-1"></a>speed_z <span class="ot">&lt;-</span> (speed <span class="sc">-</span> <span class="fu">mean</span>(speed)) <span class="sc">/</span> <span class="fu">sd</span>(speed) <span class="co">#vitesse standardisée</span></span>
-<span id="cb247-2"><a href="régression-linéaire-simple.html#cb247-2" tabindex="-1"></a>dist_z <span class="ot">&lt;-</span> (dist <span class="sc">-</span> <span class="fu">mean</span>(dist)) <span class="sc">/</span> <span class="fu">sd</span>(dist) <span class="co">#distance de freinage standardisée</span></span>
-<span id="cb247-3"><a href="régression-linéaire-simple.html#cb247-3" tabindex="-1"></a>modele_z <span class="ot">&lt;-</span> <span class="fu">lm</span>(dist_z <span class="sc">~</span> speed_z) <span class="co">#modèle sur variable standardisées</span></span>
-<span id="cb247-4"><a href="régression-linéaire-simple.html#cb247-4" tabindex="-1"></a><span class="fu">summary</span>(modele_z)</span></code></pre></div>
+<div class="sourceCode" id="cb257"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb257-1"><a href="régression-linéaire-simple.html#cb257-1" tabindex="-1"></a>speed_z <span class="ot">&lt;-</span> (speed <span class="sc">-</span> <span class="fu">mean</span>(speed)) <span class="sc">/</span> <span class="fu">sd</span>(speed) <span class="co">#vitesse standardisée</span></span>
+<span id="cb257-2"><a href="régression-linéaire-simple.html#cb257-2" tabindex="-1"></a>dist_z <span class="ot">&lt;-</span> (dist <span class="sc">-</span> <span class="fu">mean</span>(dist)) <span class="sc">/</span> <span class="fu">sd</span>(dist) <span class="co">#distance de freinage standardisée</span></span>
+<span id="cb257-3"><a href="régression-linéaire-simple.html#cb257-3" tabindex="-1"></a>modele_z <span class="ot">&lt;-</span> <span class="fu">lm</span>(dist_z <span class="sc">~</span> speed_z) <span class="co">#modèle sur variable standardisées</span></span>
+<span id="cb257-4"><a href="régression-linéaire-simple.html#cb257-4" tabindex="-1"></a><span class="fu">summary</span>(modele_z)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = dist_z ~ speed_z)
@@ -417,39 +421,39 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": false,
-"twitter": false,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": {}
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": null,
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["_main.pdf"],
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "subsection"
-}
+  "sharing": {
+    "github": false,
+    "facebook": false,
+    "twitter": false,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": {}
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": null,
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["_main.pdf"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
 });
 });
 </script>
