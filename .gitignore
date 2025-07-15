@@ -2,6 +2,8 @@
 .Rproj
 .Rproj.user
 .Rhistory
+.DS_Store
+
 
 _bookdown_files
 
