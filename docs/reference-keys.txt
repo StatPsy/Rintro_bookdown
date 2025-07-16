@@ -1,5 +1,4 @@
 guide-r
-présentation
 pourquoi-la-programmation
 exemples-de-programmation-en-r
 installation-et-environnement-r-et-rstudio

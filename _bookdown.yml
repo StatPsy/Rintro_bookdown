@@ -1,6 +1,5 @@
 rmd_files:
   - index.Rmd
-  - 01-WhyR.Rmd
   - 02-load_envR.Rmd
   - 03-object_operator.Rmd
   - 04-packages_data.Rmd
@@ -9,6 +8,7 @@ rmd_files:
   - 07-loopFOR.Rmd
   - 08-test.Rmd
   - 09-regression.Rmd
+
 delete_merged_file: true
 output_dir: "docs"
 language:
