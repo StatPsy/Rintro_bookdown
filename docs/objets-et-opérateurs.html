@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Objets et opérateurs | Guide R</title>
+  <title>Chapitre 3 Objets et opérateurs | Guide R</title>
   <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Objets et opérateurs | Guide R" />
+  <meta property="og:title" content="Chapitre 3 Objets et opérateurs | Guide R" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
@@ -19,7 +19,7 @@ set in the _output.yml file.</p>" />
   <meta name="github-repo" content="https://github.com/meganebollen/meganebollen.github.io" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Objets et opérateurs | Guide R" />
+  <meta name="twitter:title" content="Chapitre 3 Objets et opérateurs | Guide R" />
   
   <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
@@ -29,7 +29,7 @@ set in the _output.yml file.</p>" />
 <meta name="author" content="Prof. Audrey Bürki, Samuel Arthers, Mégane Bollenrücher" />
 
 
-<meta name="date" content="2025-07-15" />
+<meta name="date" content="2025-07-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -146,10 +146,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="toc-logo"><a href="./"><img src="images/logo_unil.png"></a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<li class="chapter" data-level="1" data-path="03-object_operator.html"><a href="#pr%C3%A9sentation"><i class="fa fa-check"></i><b>1</b> Présentation</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#pourquoi-la-programmation"><i class="fa fa-check"></i><b>1.1</b> Pourquoi la programmation ?</a></li>
-<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#exemples-de-programmation-en-r"><i class="fa fa-check"></i><b>1.2</b> Exemples de programmation en R</a></li>
+<li class="chapter" data-level="1.1" data-path="présentation.html"><a href="présentation.html"><i class="fa fa-check"></i><b>1.1</b> Pourquoi la programmation ?</a></li>
+<li class="chapter" data-level="1.2" data-path="présentation.html"><a href="présentation.html#exemples-de-programmation-en-r"><i class="fa fa-check"></i><b>1.2</b> Exemples de programmation en R</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="installation-et-environnement-r-et-rstudio.html"><a href="installation-et-environnement-r-et-rstudio.html"><i class="fa fa-check"></i><b>2</b> Installation et environnement R et Rstudio</a>
 <ul>
@@ -255,7 +255,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="objets-et-opérateurs" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">Chapter 3</span> Objets et opérateurs<a href="#objets-et-op%C3%A9rateurs" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<h1><span class="header-section-number">Chapitre 3</span> Objets et opérateurs<a href="#objets-et-op%C3%A9rateurs" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="objets-dans-r" class="section level2 hasAnchor" number="3.1">
 <h2><span class="header-section-number">3.1</span> Objets dans R<a href="objets-et-opérateurs.html#objets-dans-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Une variable permet de stocker une valeur ou un objet dans R. De cette façon, il sera possible d’accéder à la valeur ou à l’objet qui est stocké dans la variable.</p>
@@ -365,8 +365,8 @@ Pour pouvoir stocker une information dans un seul objet, il faut utiliser la fon
 <span id="cb58-3"><a href="objets-et-opérateurs.html#cb58-3" tabindex="-1"></a>                                  <span class="st">&quot;D&#39;accord&quot;</span>, <span class="st">&quot;Tout à fait d&#39;accord&quot;</span>), </span>
 <span id="cb58-4"><a href="objets-et-opérateurs.html#cb58-4" tabindex="-1"></a>                       <span class="at">order =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb58-5"><a href="objets-et-opérateurs.html#cb58-5" tabindex="-1"></a>satisfaction</span></code></pre></div>
-<pre><code>## [1] D&#39;accord             D&#39;accord             Tout à fait d&#39;accord Pas du tout d&#39;accord
-## [5] Pas d&#39;accord         Pas du tout d&#39;accord Pas du tout d&#39;accord
+<pre><code>## [1] D&#39;accord             D&#39;accord             Tout à fait d&#39;accord Pas du tout d&#39;accord Pas d&#39;accord         Pas du tout d&#39;accord
+## [7] Pas du tout d&#39;accord
 ## Levels: Pas du tout d&#39;accord &lt; Pas d&#39;accord &lt; D&#39;accord &lt; Tout à fait d&#39;accord</code></pre>
 </div>
 <div id="matrice" class="section level3 hasAnchor" number="3.1.4">

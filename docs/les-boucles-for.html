@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 7 Les boucles FOR | Guide R</title>
+  <title>Chapitre 7 Les boucles FOR | Guide R</title>
   <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 7 Les boucles FOR | Guide R" />
+  <meta property="og:title" content="Chapitre 7 Les boucles FOR | Guide R" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
@@ -19,7 +19,7 @@ set in the _output.yml file.</p>" />
   <meta name="github-repo" content="https://github.com/meganebollen/meganebollen.github.io" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 7 Les boucles FOR | Guide R" />
+  <meta name="twitter:title" content="Chapitre 7 Les boucles FOR | Guide R" />
   
   <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
@@ -29,7 +29,7 @@ set in the _output.yml file.</p>" />
 <meta name="author" content="Prof. Audrey Bürki, Samuel Arthers, Mégane Bollenrücher" />
 
 
-<meta name="date" content="2025-07-15" />
+<meta name="date" content="2025-07-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -146,10 +146,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="toc-logo"><a href="./"><img src="images/logo_unil.png"></a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<li class="chapter" data-level="1" data-path="07-loopFOR.html"><a href="#pr%C3%A9sentation"><i class="fa fa-check"></i><b>1</b> Présentation</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#pourquoi-la-programmation"><i class="fa fa-check"></i><b>1.1</b> Pourquoi la programmation ?</a></li>
-<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#exemples-de-programmation-en-r"><i class="fa fa-check"></i><b>1.2</b> Exemples de programmation en R</a></li>
+<li class="chapter" data-level="1.1" data-path="présentation.html"><a href="présentation.html"><i class="fa fa-check"></i><b>1.1</b> Pourquoi la programmation ?</a></li>
+<li class="chapter" data-level="1.2" data-path="présentation.html"><a href="présentation.html#exemples-de-programmation-en-r"><i class="fa fa-check"></i><b>1.2</b> Exemples de programmation en R</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="installation-et-environnement-r-et-rstudio.html"><a href="installation-et-environnement-r-et-rstudio.html"><i class="fa fa-check"></i><b>2</b> Installation et environnement R et Rstudio</a>
 <ul>
@@ -255,7 +255,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="les-boucles-for" class="section level1 hasAnchor" number="7">
-<h1><span class="header-section-number">Chapter 7</span> Les boucles FOR<a href="les-boucles-for.html#les-boucles-for" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<h1><span class="header-section-number">Chapitre 7</span> Les boucles FOR<a href="les-boucles-for.html#les-boucles-for" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Les boucles sont utilisées en programmation pour exécuter automatiquement un bloc de code plusieurs fois, ce qui permet d’éviter la répétition manuelle. Elles sont très utiles pour effectuer des calculs répétitis ou parcourir des vecteurs, des listes, des matrices ou des bases de données.</p>
 <p>Dans ce chapitre, nous traitons des boucles <code>for</code>. D’autres types de boucles existent. Les boucles <code>for</code>permettent d’itérer sur une séquence de valeurs prédéfinies en exécutant le code présent à l’intérieur de la bouche pour chaque élément.</p>
 <div id="structure" class="section level2 hasAnchor" number="7.1">
@@ -337,21 +337,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb200-1"><a href="les-boucles-for.html#cb200-1" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> jours) {</span>
 <span id="cb200-2"><a href="les-boucles-for.html#cb200-2" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&quot;Aujourd&#39;hui, nous sommes&quot;</span>, jours))</span>
 <span id="cb200-3"><a href="les-boucles-for.html#cb200-3" tabindex="-1"></a>}</span></code></pre></div>
-<pre><code>## [1] &quot;Aujourd&#39;hui, nous sommes lundi&quot;    &quot;Aujourd&#39;hui, nous sommes mardi&quot;   
-## [3] &quot;Aujourd&#39;hui, nous sommes mercredi&quot; &quot;Aujourd&#39;hui, nous sommes jeudi&quot;   
-## [5] &quot;Aujourd&#39;hui, nous sommes vendredi&quot;
-## [1] &quot;Aujourd&#39;hui, nous sommes lundi&quot;    &quot;Aujourd&#39;hui, nous sommes mardi&quot;   
-## [3] &quot;Aujourd&#39;hui, nous sommes mercredi&quot; &quot;Aujourd&#39;hui, nous sommes jeudi&quot;   
-## [5] &quot;Aujourd&#39;hui, nous sommes vendredi&quot;
-## [1] &quot;Aujourd&#39;hui, nous sommes lundi&quot;    &quot;Aujourd&#39;hui, nous sommes mardi&quot;   
-## [3] &quot;Aujourd&#39;hui, nous sommes mercredi&quot; &quot;Aujourd&#39;hui, nous sommes jeudi&quot;   
-## [5] &quot;Aujourd&#39;hui, nous sommes vendredi&quot;
-## [1] &quot;Aujourd&#39;hui, nous sommes lundi&quot;    &quot;Aujourd&#39;hui, nous sommes mardi&quot;   
-## [3] &quot;Aujourd&#39;hui, nous sommes mercredi&quot; &quot;Aujourd&#39;hui, nous sommes jeudi&quot;   
-## [5] &quot;Aujourd&#39;hui, nous sommes vendredi&quot;
-## [1] &quot;Aujourd&#39;hui, nous sommes lundi&quot;    &quot;Aujourd&#39;hui, nous sommes mardi&quot;   
-## [3] &quot;Aujourd&#39;hui, nous sommes mercredi&quot; &quot;Aujourd&#39;hui, nous sommes jeudi&quot;   
-## [5] &quot;Aujourd&#39;hui, nous sommes vendredi&quot;</code></pre>
+<pre><code>## [1] &quot;Aujourd&#39;hui, nous sommes lundi&quot;    &quot;Aujourd&#39;hui, nous sommes mardi&quot;    &quot;Aujourd&#39;hui, nous sommes mercredi&quot;
+## [4] &quot;Aujourd&#39;hui, nous sommes jeudi&quot;    &quot;Aujourd&#39;hui, nous sommes vendredi&quot;
+## [1] &quot;Aujourd&#39;hui, nous sommes lundi&quot;    &quot;Aujourd&#39;hui, nous sommes mardi&quot;    &quot;Aujourd&#39;hui, nous sommes mercredi&quot;
+## [4] &quot;Aujourd&#39;hui, nous sommes jeudi&quot;    &quot;Aujourd&#39;hui, nous sommes vendredi&quot;
+## [1] &quot;Aujourd&#39;hui, nous sommes lundi&quot;    &quot;Aujourd&#39;hui, nous sommes mardi&quot;    &quot;Aujourd&#39;hui, nous sommes mercredi&quot;
+## [4] &quot;Aujourd&#39;hui, nous sommes jeudi&quot;    &quot;Aujourd&#39;hui, nous sommes vendredi&quot;
+## [1] &quot;Aujourd&#39;hui, nous sommes lundi&quot;    &quot;Aujourd&#39;hui, nous sommes mardi&quot;    &quot;Aujourd&#39;hui, nous sommes mercredi&quot;
+## [4] &quot;Aujourd&#39;hui, nous sommes jeudi&quot;    &quot;Aujourd&#39;hui, nous sommes vendredi&quot;
+## [1] &quot;Aujourd&#39;hui, nous sommes lundi&quot;    &quot;Aujourd&#39;hui, nous sommes mardi&quot;    &quot;Aujourd&#39;hui, nous sommes mercredi&quot;
+## [4] &quot;Aujourd&#39;hui, nous sommes jeudi&quot;    &quot;Aujourd&#39;hui, nous sommes vendredi&quot;</code></pre>
 </div>
 <div id="créer-un-vecteur" class="section level3 hasAnchor" number="7.2.3">
 <h3><span class="header-section-number">7.2.3</span> Créer un vecteur<a href="#cr%C3%A9er-un-vecteur" class="anchor-section" aria-label="Anchor link to header"></a></h3>

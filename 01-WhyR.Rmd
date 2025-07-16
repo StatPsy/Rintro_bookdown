@@ -1,4 +1,4 @@
-# Introduction
+# Présentation
 
 Ceci est le guide R que nous proposons pour vous accompagner durant le cours de Stat I.
 

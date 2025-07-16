@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 Description des données quantitatives et qualitatives | Guide R</title>
+  <title>Chapitre 5 Description des données quantitatives et qualitatives | Guide R</title>
   <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 Description des données quantitatives et qualitatives | Guide R" />
+  <meta property="og:title" content="Chapitre 5 Description des données quantitatives et qualitatives | Guide R" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
@@ -19,7 +19,7 @@ set in the _output.yml file.</p>" />
   <meta name="github-repo" content="https://github.com/meganebollen/meganebollen.github.io" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 Description des données quantitatives et qualitatives | Guide R" />
+  <meta name="twitter:title" content="Chapitre 5 Description des données quantitatives et qualitatives | Guide R" />
   
   <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
@@ -29,7 +29,7 @@ set in the _output.yml file.</p>" />
 <meta name="author" content="Prof. Audrey Bürki, Samuel Arthers, Mégane Bollenrücher" />
 
 
-<meta name="date" content="2025-07-15" />
+<meta name="date" content="2025-07-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -146,10 +146,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="toc-logo"><a href="./"><img src="images/logo_unil.png"></a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<li class="chapter" data-level="1" data-path="05-description.html"><a href="#pr%C3%A9sentation"><i class="fa fa-check"></i><b>1</b> Présentation</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#pourquoi-la-programmation"><i class="fa fa-check"></i><b>1.1</b> Pourquoi la programmation ?</a></li>
-<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#exemples-de-programmation-en-r"><i class="fa fa-check"></i><b>1.2</b> Exemples de programmation en R</a></li>
+<li class="chapter" data-level="1.1" data-path="présentation.html"><a href="présentation.html"><i class="fa fa-check"></i><b>1.1</b> Pourquoi la programmation ?</a></li>
+<li class="chapter" data-level="1.2" data-path="présentation.html"><a href="présentation.html#exemples-de-programmation-en-r"><i class="fa fa-check"></i><b>1.2</b> Exemples de programmation en R</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="installation-et-environnement-r-et-rstudio.html"><a href="installation-et-environnement-r-et-rstudio.html"><i class="fa fa-check"></i><b>2</b> Installation et environnement R et Rstudio</a>
 <ul>
@@ -255,7 +255,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="description-des-données-quantitatives-et-qualitatives" class="section level1 hasAnchor" number="5">
-<h1><span class="header-section-number">Chapter 5</span> Description des données quantitatives et qualitatives<a href="#description-des-donn%C3%A9es-quantitatives-et-qualitatives" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<h1><span class="header-section-number">Chapitre 5</span> Description des données quantitatives et qualitatives<a href="#description-des-donn%C3%A9es-quantitatives-et-qualitatives" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Ce deuxième chapitre regroupe quelques fonctions pour décrire numériquement et graphiquement les variables quantitatives et qualitatives. Des fonctions spécifiques doivent être utilisées relativement à la nature de la variable.</p>
 <div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="description-des-données-quantitatives-et-qualitatives.html#cb101-1" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;sport.csv&quot;</span>, <span class="at">sep =</span> <span class="st">&quot;;&quot;</span>, <span class="at">header =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb101-2"><a href="description-des-données-quantitatives-et-qualitatives.html#cb101-2" tabindex="-1"></a><span class="fu">str</span>(df)</span></code></pre></div>
@@ -282,11 +282,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb105-3"><a href="description-des-données-quantitatives-et-qualitatives.html#cb105-3" tabindex="-1"></a>                                     <span class="st">&quot;moyennement_satisfait&quot;</span>, <span class="st">&quot;tres_satisfait&quot;</span>, </span>
 <span id="cb105-4"><a href="description-des-données-quantitatives-et-qualitatives.html#cb105-4" tabindex="-1"></a>                                     <span class="st">&quot;extremement_satisfait&quot;</span>))</span>
 <span id="cb105-5"><a href="description-des-données-quantitatives-et-qualitatives.html#cb105-5" tabindex="-1"></a>df<span class="sc">$</span>Satisfaction</span></code></pre></div>
-<pre><code>##  [1] extremement_satisfait moyennement_satisfait plutot_insatisfait    pas_du_tout_satisfait
-##  [5] tres_satisfait        pas_du_tout_satisfait moyennement_satisfait plutot_insatisfait   
-##  [9] moyennement_satisfait tres_satisfait        plutot_insatisfait    pas_du_tout_satisfait
-## [13] plutot_insatisfait    tres_satisfait        tres_satisfait       
-## 5 Levels: pas_du_tout_satisfait &lt; plutot_insatisfait &lt; moyennement_satisfait &lt; ... &lt; extremement_satisfait</code></pre>
+<pre><code>##  [1] extremement_satisfait moyennement_satisfait plutot_insatisfait    pas_du_tout_satisfait tres_satisfait       
+##  [6] pas_du_tout_satisfait moyennement_satisfait plutot_insatisfait    moyennement_satisfait tres_satisfait       
+## [11] plutot_insatisfait    pas_du_tout_satisfait plutot_insatisfait    tres_satisfait        tres_satisfait       
+## Levels: pas_du_tout_satisfait &lt; plutot_insatisfait &lt; moyennement_satisfait &lt; tres_satisfait &lt; extremement_satisfait</code></pre>
 <p>Pour les variables qualitatives, la description numérique classique est le tableau de contingence que l’on obtient avec la fonction <code>table()</code>. Il est possible de décrire chaque variable à la fois ou de décrire une variable en fonction d’une autre.</p>
 <div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="description-des-données-quantitatives-et-qualitatives.html#cb107-1" tabindex="-1"></a><span class="fu">table</span>(df<span class="sc">$</span>Sexe)</span></code></pre></div>
 <pre><code>## 
@@ -294,19 +293,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 9 6</code></pre>
 <div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="description-des-données-quantitatives-et-qualitatives.html#cb109-1" tabindex="-1"></a><span class="fu">table</span>(df<span class="sc">$</span>Satisfaction)</span></code></pre></div>
 <pre><code>## 
-## pas_du_tout_satisfait    plutot_insatisfait moyennement_satisfait        tres_satisfait 
-##                     3                     4                     3                     4 
-## extremement_satisfait 
-##                     1</code></pre>
+## pas_du_tout_satisfait    plutot_insatisfait moyennement_satisfait        tres_satisfait extremement_satisfait 
+##                     3                     4                     3                     4                     1</code></pre>
 <div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="description-des-données-quantitatives-et-qualitatives.html#cb111-1" tabindex="-1"></a><span class="fu">table</span>(df<span class="sc">$</span>Sexe, df<span class="sc">$</span>Satisfaction)</span></code></pre></div>
 <pre><code>##    
-##     pas_du_tout_satisfait plutot_insatisfait moyennement_satisfait tres_satisfait
-##   F                     1                  4                     1              2
-##   M                     2                  0                     2              2
-##    
-##     extremement_satisfait
-##   F                     1
-##   M                     0</code></pre>
+##     pas_du_tout_satisfait plutot_insatisfait moyennement_satisfait tres_satisfait extremement_satisfait
+##   F                     1                  4                     1              2                     1
+##   M                     2                  0                     2              2                     0</code></pre>
 </div>
 <div id="variables-quantitatives" class="section level3 hasAnchor" number="5.1.2">
 <h3><span class="header-section-number">5.1.2</span> Variables quantitatives<a href="description-des-données-quantitatives-et-qualitatives.html#variables-quantitatives" class="anchor-section" aria-label="Anchor link to header"></a></h3>
