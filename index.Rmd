@@ -1,12 +1,10 @@
---- 
+---
 title: "Guide R"
 author: "Prof. Audrey Bürki, Samuel Arthers, Mégane Bollenrücher"
 date: "`r Sys.Date()`"
-site: bookdown::bookdown_site
+site: bookdown::gitbook
 documentclass: book
 bibliography: [book.bib, packages.bib]
-# url: your book url like https://bookdown.org/yihui/bookdown
-# cover-image: path to the social sharing image like images/cover.jpg
 description: |
   This is a minimal example of using the bookdown package to write a book.
   The HTML output format for this example is bookdown::gitbook,
@@ -14,5 +12,7 @@ description: |
 link-citations: yes
 github-repo: https://github.com/meganebollen/meganebollen.github.io
 ---
+
+# Guide R
 
 Merci de prendre note que ce bookdown est en cours de rédaction.
