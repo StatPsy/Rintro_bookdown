@@ -29,7 +29,7 @@ set in the _output.yml file.</p>" />
 <meta name="author" content="Prof. Audrey Bürki, Samuel Arthers, Mégane Bollenrücher" />
 
 
-<meta name="date" content="2025-07-16" />
+<meta name="date" content="2025-08-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -282,10 +282,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb105-3"><a href="description-des-données-quantitatives-et-qualitatives.html#cb105-3" tabindex="-1"></a>                                     <span class="st">&quot;moyennement_satisfait&quot;</span>, <span class="st">&quot;tres_satisfait&quot;</span>, </span>
 <span id="cb105-4"><a href="description-des-données-quantitatives-et-qualitatives.html#cb105-4" tabindex="-1"></a>                                     <span class="st">&quot;extremement_satisfait&quot;</span>))</span>
 <span id="cb105-5"><a href="description-des-données-quantitatives-et-qualitatives.html#cb105-5" tabindex="-1"></a>df<span class="sc">$</span>Satisfaction</span></code></pre></div>
-<pre><code>##  [1] extremement_satisfait moyennement_satisfait plutot_insatisfait    pas_du_tout_satisfait tres_satisfait       
-##  [6] pas_du_tout_satisfait moyennement_satisfait plutot_insatisfait    moyennement_satisfait tres_satisfait       
-## [11] plutot_insatisfait    pas_du_tout_satisfait plutot_insatisfait    tres_satisfait        tres_satisfait       
-## Levels: pas_du_tout_satisfait &lt; plutot_insatisfait &lt; moyennement_satisfait &lt; tres_satisfait &lt; extremement_satisfait</code></pre>
+<pre><code>##  [1] extremement_satisfait moyennement_satisfait plutot_insatisfait    pas_du_tout_satisfait
+##  [5] tres_satisfait        pas_du_tout_satisfait moyennement_satisfait plutot_insatisfait   
+##  [9] moyennement_satisfait tres_satisfait        plutot_insatisfait    pas_du_tout_satisfait
+## [13] plutot_insatisfait    tres_satisfait        tres_satisfait       
+## 5 Levels: pas_du_tout_satisfait &lt; plutot_insatisfait &lt; moyennement_satisfait &lt; ... &lt; extremement_satisfait</code></pre>
 <p>Pour les variables qualitatives, la description numérique classique est le tableau de contingence que l’on obtient avec la fonction <code>table()</code>. Il est possible de décrire chaque variable à la fois ou de décrire une variable en fonction d’une autre.</p>
 <div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="description-des-données-quantitatives-et-qualitatives.html#cb107-1" tabindex="-1"></a><span class="fu">table</span>(df<span class="sc">$</span>Sexe)</span></code></pre></div>
 <pre><code>## 
@@ -293,13 +294,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 9 6</code></pre>
 <div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="description-des-données-quantitatives-et-qualitatives.html#cb109-1" tabindex="-1"></a><span class="fu">table</span>(df<span class="sc">$</span>Satisfaction)</span></code></pre></div>
 <pre><code>## 
-## pas_du_tout_satisfait    plutot_insatisfait moyennement_satisfait        tres_satisfait extremement_satisfait 
-##                     3                     4                     3                     4                     1</code></pre>
+## pas_du_tout_satisfait    plutot_insatisfait moyennement_satisfait        tres_satisfait 
+##                     3                     4                     3                     4 
+## extremement_satisfait 
+##                     1</code></pre>
 <div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="description-des-données-quantitatives-et-qualitatives.html#cb111-1" tabindex="-1"></a><span class="fu">table</span>(df<span class="sc">$</span>Sexe, df<span class="sc">$</span>Satisfaction)</span></code></pre></div>
 <pre><code>##    
-##     pas_du_tout_satisfait plutot_insatisfait moyennement_satisfait tres_satisfait extremement_satisfait
-##   F                     1                  4                     1              2                     1
-##   M                     2                  0                     2              2                     0</code></pre>
+##     pas_du_tout_satisfait plutot_insatisfait moyennement_satisfait tres_satisfait
+##   F                     1                  4                     1              2
+##   M                     2                  0                     2              2
+##    
+##     extremement_satisfait
+##   F                     1
+##   M                     0</code></pre>
 </div>
 <div id="variables-quantitatives" class="section level3 hasAnchor" number="5.1.2">
 <h3><span class="header-section-number">5.1.2</span> Variables quantitatives<a href="description-des-données-quantitatives-et-qualitatives.html#variables-quantitatives" class="anchor-section" aria-label="Anchor link to header"></a></h3>
