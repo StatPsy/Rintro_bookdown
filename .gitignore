@@ -9,3 +9,5 @@ _bookdown_files
 
 docs/_main.tex
 docs/_main.pdf
+
+*.DS_Store
