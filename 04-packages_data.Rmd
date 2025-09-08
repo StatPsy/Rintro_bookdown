@@ -1,26 +1,4 @@
-# Packages et données
-
-Ce premier chapitre introduit deux concepts importants dans R. Le premier est les packages et le second concerne les données.
-
-## Installation et gestion des packages
-
-Les packages sont des regroupements de fonctions et de jeux de données développés dans R et qui doivent se télécharger une seule fois, mais ils devront être importés à chaque utilisation. Le code ci-dessous permet d'installer le package ggplot2:
-
-```{r eval=FALSE}
-
-install.packages("ggplot2", dependencies = TRUE)
-
-```
-
-Avant chaque utilisation des packages, il est nécessaire d'importer le package grâce au code suivant:
-
-```{r eval=FALSE}
-
-library(ggplot2)
-
-```
-
-## Téléchargement des données
+# Téléchargement des données
 
 Dans R, les bases de données se déclinent de plusieurs façons:
 
@@ -28,7 +6,7 @@ Dans R, les bases de données se déclinent de plusieurs façons:
 2.  Les bases de données peuvent être créées dans l'environnement sauvées dans l'environnement R. Ces fichiers ont une extension .RData
 3.  Les bases de données peuvent être issues de fichiers externes. Ces fichiers peuvent avoir différentes extensions, les plus courantes étant .csv et .txt.
 
-### Bases de données issues de la base de R ou des packages
+## Bases de données issues de la base de R ou des packages
 
 Le code suivant permet d'importer le jeu de données "iris" disponible de base dans R.
 
@@ -44,7 +22,7 @@ knitr::include_graphics("images/environment_forDataDownload.png")
 
 Si les données sont dans un package, le package doit être importé au préalable.
 
-### Bases de données issues dans un fichier .RData
+## Bases de données issues dans un fichier .RData
 
 Les fichiers `.RData` sont spécifique au language R et peuvent contenir plusieurs objets en un seul fichier. Pour importer des données, il faut utiliser la fonction `load()`
 
@@ -58,7 +36,7 @@ Tous les objets importés sont chargés dans l'environnement de travail.
 knitr::include_graphics("images/environment_forRDataDownload.png")
 ```
 
-### Bases de données issues de fichiers externes
+## Bases de données issues de fichiers externes
 
 Les données à analyser sont souvent disponibles dans un fichier externe sous différents formats tels que .csv ou .txt. Pour importer ces données, il existe une fonction par type de fichier (`read.csv()` et `read.table()`). Lorsqu'une de ces fonctions est utilisée, le contenu est stocké dans une dataframe. Il est nécessaire de spécifier le chemin d'accès entre votre logiciel et votre fichier à télécharger. Vous pouvez le faire de deux manières: 1. En utilisant la fonction `setwd()` et en spécifiant à l'intérieur la direction complète qui va permettre au logiciel de retrouver votre document dans vos fichiers. 1. En créant un projet dans lequel vous stockez vos documents. Ces fonctions acceptent des arguments qui permettent de s'adapter à la nature de fichier à importer. Parmi ces arguments, il y en a trois principaux:
 

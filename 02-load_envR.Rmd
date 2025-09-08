@@ -6,7 +6,7 @@ R est un langage de programmation adapté au traitement de données et à l'anal
 
 Pour programmer en langage R, il est nécessaire d'installer deux outils essentiels:
 
-1.  Le **logiciel R** permet de traduire du texte sous forme de code R en binaire qui est le langage interne du processeur de l'ordinateur.
+1.  Le **langage R** permet de traduire des commandes en instructions pour l'ordinateur.
 2.  Le **logiciel RStudio** permet de faciliter l'utilisation du logiciel R en donnant l'accès à une interface utilisateur.
 
 Il est possible de faire une analogie avec une voiture. Le logiciel R est le moteur et RStudio est le tableau de bord. Sans le tableau de bord, il n'est pas possible de controler le moteur.
@@ -22,6 +22,25 @@ Il est possible de faire une analogie avec une voiture. Le logiciel R est le mot
 2.  Installer RStudio sur le site suivant: <https://posit.co/download/rstudio-desktop/>
 
 Après avoir installé ces deux logiciels, vous aurez accès à deux nouvelles applications. Cependant, nous utiliserons uniquement RStudio pour programmer. Lorsque vous exécuterez votre code écrit sur RStudio, ce dernier fera automatiquement appel à R pour exécuter les codes.
+
+## Installation et gestion des packages
+
+Les packages sont des regroupements de fonctions et de jeux de données développés dans R et qui doivent se télécharger une seule fois, mais ils devront être importés à chaque utilisation. Le code ci-dessous permet d'installer le package ggplot2:
+
+```{r eval=FALSE}
+
+install.packages("ggplot2", dependencies = TRUE)#Remplacer ggplot2 par le package requis
+
+```
+
+A chaque ouverture de Rstudio il est nécessaire d'importer le package (si besoin du package au cours de la session) grâce au code suivant:
+
+```{r eval=FALSE}
+
+library(ggplot2)#idem
+
+```
+
 
 ## Organiser ses fichiers
 
