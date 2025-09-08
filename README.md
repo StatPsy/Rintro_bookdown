@@ -11,39 +11,16 @@ Il est nécessaire d'installer le package bookdown pour utiliser cette extension
 install.packages("bookdown")
 ```
 
-## Git
-Il faut premièrement configurer Git sur votre ordinateur avant de pouvoir push sur le repo.
-
-Lors de la première utilisation de Git, il faut ajouter son nom d'utilisateur ainsi que l'adresse mail à votre ordinateur à l'aide de l'invite de commandes avec les lignes de commande suivante:
-
-```{bash}
-git config --global user.name "John Doe"
-git config --global user.email johndoe@example.com
-```
-
-Ensuite, il est nécessaire de vérifier si une clé privé et publique sont déjà présentes sur l'ordinateur:
-
-```{bash}
-cd ~/.ssh
-ls
-```
-
-Si une clé est existante, une liste de fichier s'affiche. Le fichier `.pub` est la clé publique.
-Dans le cas contraire, rien ne s'affiche. Il faudra donc créer une clé avec le code suivant:
-
-```{bash}
-ssh-keygen -o
-```
-
-Il sera demandé si vous voulez saver la clé (`.ssh/id_rsa`) et ensuite il vous sera demandé si vous désirez ajouter un mot de passe afin d'utiliser la clé.
-
-Pour finir, il faudra envoyer la clé publique (`.pub`) au propriétaire du repository afin que vous receviez les accès pour push les modifications dans le repository.
-
-
-### Conseil pour un bon usage de Git
+Les instructions suivantes partent du principe que vous avez des connaissances de git et detaillent la procedure pour GitHub Desktop:
 
 1. Pull le repo en ligne avant de commencer à travailler.
-1. Une fois les modifications réalisées, appuyez sur le bouton "Build Book" dans R
-1. Sélectionnez les modifications que vous désirez mettre sur le github avec `stage`
+1. Crée une branche basée sur `main` avec un nom explicit court (e.g. updated_chap1)
+1. Une fois les modifications réalisées, construisez le livre avec la commande `bookdown::render_book("index.Rmd", "bookdown::gitbook")`
+1. Sélectionnez les modifications que vous désirez mettre sur GitHub
 1. Ajoutez un message clair puis vous pouvez `commit` les modifications
-1. Pour mettre vos modifications sur github, réalisez un `push` de vos commits.
+1. Pour mettre vos modifications sur github, publiez votre branche.
+1. Naviguez vers le repo sur GitHub (https://github.com/StatPsy/Rintro_bookdown/)
+1. Cliquez sur Compare and pull request (bandeau jaune)
+1. Changez le `base repository` pour StatPsy 
+1. decrivez les changements puis creer le pull request
+1. assignez un membre du repo comme reviewer et attendez l'évaluation avant l'intégration
