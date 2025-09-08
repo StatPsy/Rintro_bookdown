@@ -1,6 +1,6 @@
 ---
 title: "Guide R"
-author: "Prof. Audrey Bürki, Samuel Arthers, Mégane Bollenrücher"
+author: "Edité par l'équipe StatPsy, basé sur le document de Mégane Bollenrücher (https://github.com/meganebollen/meganebollen.github.io)"
 date: "`r Sys.Date()`"
 site: bookdown::gitbook
 documentclass: book
@@ -10,7 +10,7 @@ description: |
   The HTML output format for this example is bookdown::gitbook,
   set in the _output.yml file.
 link-citations: yes
-github-repo: https://github.com/meganebollen/meganebollen.github.io
+github-repo: https://github.com/StatPsy/Rintro_bookdown
 ---
 
 # Guide R
