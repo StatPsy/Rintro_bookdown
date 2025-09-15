@@ -29,7 +29,7 @@ set in the _output.yml file.</p>" />
 <meta name="author" content="Edité par l’équipe StatPsy, basé sur le document de Mégane Bollenrücher (https://github.com/meganebollen/meganebollen.github.io)" />
 
 
-<meta name="date" content="2025-09-08" />
+<meta name="date" content="2025-09-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -160,7 +160,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.5" data-path="02-load_envR.html"><a href="#r%C3%A9pertoire-de-travail"><i class="fa fa-check"></i><b>2.5</b> Répertoire de travail</a>
 <ul>
 <li class="chapter" data-level="2.5.1" data-path="02-load_envR.html"><a href="#d%C3%A9finir-son-r%C3%A9pertoire-de-travail-avec-setwd"><i class="fa fa-check"></i><b>2.5.1</b> Définir son répertoire de travail avec <em>setwd( )</em></a></li>
-<li class="chapter" data-level="2.5.2" data-path="installation-et-environnement-r-et-rstudio.html"><a href="installation-et-environnement-r-et-rstudio.html#projet-r"><i class="fa fa-check"></i><b>2.5.2</b> Projet R</a></li>
 </ul></li>
 <li class="chapter" data-level="2.6" data-path="installation-et-environnement-r-et-rstudio.html"><a href="installation-et-environnement-r-et-rstudio.html#environnement-de-travail"><i class="fa fa-check"></i><b>2.6</b> Environnement de travail</a></li>
 </ul></li>
@@ -260,45 +259,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb16-3"><a href="installation-et-environnement-r-et-rstudio.html#cb16-3" tabindex="-1"></a><span class="co"># enregistré dans le dossier Data qui se trouve dans le répertoire de travail.</span></span>
 <span id="cb16-4"><a href="installation-et-environnement-r-et-rstudio.html#cb16-4" tabindex="-1"></a><span class="fu">read.csv</span>(<span class="at">file=</span><span class="st">&quot;Data/data_ex1.csv&quot;</span>)</span></code></pre></div>
 <p><em>Pour rappel, lorsque vous allez indiquer le chemin menant à un fichier, vous pouvez utiliser la touche ‘tab’ afin que Rstudio vous propose les différentes alternatives à votre disposition. Choisissez votre étape en cliquant dessus. La touche ‘tab’ peut être réutilisée jusqu’à ce que vous arriviez au fichier de votre choix. Cela vous permet d’éviter toute forme de fausse manipulation telle qu’une faute de frappe par exemple.</em></p>
-<center>
-<p><img src="images/tab_path.png" /><!-- --></p>
-</center>
-</div>
-<div id="projet-r" class="section level3 hasAnchor" number="2.5.2">
-<h3><span class="header-section-number">2.5.2</span> Projet R<a href="installation-et-environnement-r-et-rstudio.html#projet-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>A la place de préciser votre répertoire de travail par la fonction <em>setwd( )</em>, Rstudio vous propose une autre alternative: la creation d’un <a href="https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects">projet</a>. La création d’un projet vous permet de générer un raccourci qui va lancer Rstudio directement depuis votre répertoire de travail choisi (p.ex, votre dossier Statistique_I). L’avantage d’ouvrir Rstudio depuis votre répertoire de travail est que cela change directement le point d’ancrage de vos chemins sans que vous ayez besoin de le spécifier par la fonction <em>setwd( )</em>.</p>
-<p>Pour créer un projet, suivez les 5 étapes suivantes :</p>
-<ol style="list-style-type: decimal">
-<li><p>Générez un nouveau projet en suivant le chemin suivant dans votre interface RStudio: File &gt; New project… (Fichier &gt; Nouveau projet…)</p>
-<p><img src="images/project_new.png" /><!-- --></p></li>
-<li><p>Vous avez ensuite deux possibilités:</p>
-<ol style="list-style-type: lower-roman">
-<li><p>Créer un <strong>nouveau</strong> dossier<br />
-<em>Par exemple, créer un nouveau dossier appelé “Statistique_I” sur votre bureau ou ailleurs.</em></p></li>
-<li><p>Générer le projet au sein d’un dossier <strong>préexistant</strong><br />
-<em>Par exemple, instaurer le projet dans votre dossier “Statistique_I”, rangé dans vos cours de première année.</em></p></li>
-</ol></li>
-<li><p>L’étape suivante est de structurer votre répertoire de travail (nouveau ou existant) de la manière suivante:</p>
-<ul>
-<li><p><strong>Statistique_I,</strong> le nom de votre répertoire de travail choisi</p>
-<ul>
-<li><p><strong>Statistique_I.Rproj</strong>, votre fichier .Rproj que vous avez généré à l’étape précédente</p></li>
-<li><p><strong>Data</strong>, le dossier pour vos bases de données</p></li>
-<li><p><strong>Scripts</strong>, le dossier pour vos scripts</p></li>
-<li><p><strong>Slides</strong>, le dossier pour les slides du cours ou autres documents</p></li>
-</ul></li>
-</ul></li>
-</ol>
-<center>
-<p><img src="images/project_path.png" /><!-- --></p>
-</center>
-<ol start="4" style="list-style-type: decimal">
-<li><p>Vous pouvez maintenant ouvrir Rstudio en double-cliquant sur votre fichier Statistique_I.Rproj.</p></li>
-<li><p>Une fois Rstudio ouvert par ce biais, les chemins menant à vos diverses bases de données seront directs.</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="installation-et-environnement-r-et-rstudio.html#cb17-1" tabindex="-1"></a><span class="co"># Par exemple, importer le fichier &quot;data_ex1.csv&quot;, enregistré dans le dossier Data de mon répertoire de travail.</span></span>
-<span id="cb17-2"><a href="installation-et-environnement-r-et-rstudio.html#cb17-2" tabindex="-1"></a><span class="fu">read.csv</span>(<span class="at">file=</span><span class="st">&quot;Data/data_ex1.csv&quot;</span>)</span></code></pre></div>
-<p><em>Pour rappel, lorsque vous allez indiquer le chemin menant à un fichier, vous pouvez utiliser la touche ‘tab’ afin que Rstudio vous propose les différentes alternatives à votre disposition. Choisissez votre étape en cliquant dessus. La touche ‘tab’ peut être réutilisée jusqu’à ce que vous arriviez au fichier de votre choix. Cela vous permet d’éviter toute forme de fausse manipulation telle qu’une faute de frappe par exemple.</em></p></li>
-</ol>
 <center>
 <p><img src="images/tab_path.png" /><!-- --></p>
 </center>

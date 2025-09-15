@@ -8,5 +8,4 @@ installation-et-gestion-des-packages
 organiser-ses-fichiers
 répertoire-de-travail
 définir-son-répertoire-de-travail-avec-setwd
-projet-r
 environnement-de-travail

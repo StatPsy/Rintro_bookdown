@@ -128,65 +128,6 @@ knitr::include_graphics("images/tab_path.png")
 
 </center>
 
-### Projet R
-
-A la place de préciser votre répertoire de travail par la fonction *setwd( )*, Rstudio vous propose une autre alternative: la creation d'un [projet](https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects). La création d'un projet vous permet de générer un raccourci qui va lancer Rstudio directement depuis votre répertoire de travail choisi (p.ex, votre dossier Statistique_I). L'avantage d'ouvrir Rstudio depuis votre répertoire de travail est que cela change directement le point d'ancrage de vos chemins sans que vous ayez besoin de le spécifier par la fonction *setwd( )*.
-
-Pour créer un projet, suivez les 5 étapes suivantes :
-
-1.  Générez un nouveau projet en suivant le chemin suivant dans votre interface RStudio: File \> New project... (Fichier \> Nouveau projet...)
-
-    ```{r echo=FALSE}
-    knitr::include_graphics("images/project_new.png")
-    ```
-
-2.  Vous avez ensuite deux possibilités:
-
-    i.  Créer un **nouveau** dossier\
-        *Par exemple, créer un nouveau dossier appelé "Statistique_I" sur votre bureau ou ailleurs.*
-
-    ii. Générer le projet au sein d'un dossier **préexistant**\
-        *Par exemple, instaurer le projet dans votre dossier "Statistique_I", rangé dans vos cours de première année.*
-
-3.  L'étape suivante est de structurer votre répertoire de travail (nouveau ou existant) de la manière suivante:
-
-    -   **Statistique_I,** le nom de votre répertoire de travail choisi
-
-        -   **Statistique_I.Rproj**, votre fichier .Rproj que vous avez généré à l'étape précédente
-
-        -   **Data**, le dossier pour vos bases de données
-
-        -   **Scripts**, le dossier pour vos scripts
-
-        -   **Slides**, le dossier pour les slides du cours ou autres documents
-
-<center>
-
-```{r echo=FALSE}
-knitr::include_graphics("images/project_path.png")
-```
-
-</center>
-
-4.  Vous pouvez maintenant ouvrir Rstudio en double-cliquant sur votre fichier Statistique_I.Rproj.
-
-5.  Une fois Rstudio ouvert par ce biais, les chemins menant à vos diverses bases de données seront directs.
-
-    ``` r
-    # Par exemple, importer le fichier "data_ex1.csv", enregistré dans le dossier Data de mon répertoire de travail.
-    read.csv(file="Data/data_ex1.csv")
-    ```
-
-    *Pour rappel, lorsque vous allez indiquer le chemin menant à un fichier, vous pouvez utiliser la touche 'tab' afin que Rstudio vous propose les différentes alternatives à votre disposition. Choisissez votre étape en cliquant dessus. La touche 'tab' peut être réutilisée jusqu'à ce que vous arriviez au fichier de votre choix. Cela vous permet d'éviter toute forme de fausse manipulation telle qu'une faute de frappe par exemple.*
-
-<center>
-
-```{r echo=FALSE}
-knitr::include_graphics("images/tab_path.png")
-```
-
-</center>
-
 ## Environnement de travail
 
 Une fois que RStudio est lancé, une interface découpée en plusieurs zones se présente. Ces parties parties peuvent être redimensionnées, masquées ou maximisées selon vos préférences.
