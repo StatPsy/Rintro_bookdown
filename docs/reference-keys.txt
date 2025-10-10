@@ -8,7 +8,6 @@ installation-et-gestion-des-packages
 environnement-de-travail
 organiser-ses-fichiers
 répertoire-de-travail
-télécharger-un-fichier-sur-moodle
 objets-et-opérateurs
 objets-dans-r
 scalaire
@@ -21,4 +20,4 @@ téléchargement-des-données
 bases-de-données-issues-de-la-base-de-r-ou-des-packages
 bases-de-données-issues-dans-un-fichier-.rdata
 bases-de-données-issues-de-fichiers-externes
-télécharger-un-fichier-sur-moodle-1
+télécharger-un-fichier-sur-moodle

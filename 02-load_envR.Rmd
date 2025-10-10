@@ -141,11 +141,4 @@ knitr::include_graphics("images/tab_path.png")
 
 </center>
 
-## Télécharger un fichier sur moodle
-
-Lorsque vous télécharger un fichier sur Moodle ne l'ouvrez pas avec Excel car ce dernier modifie les propriétés du fichier. Pour enregistrer le fichier au bon endroit:
-
-- Sur certaines machines il suffit de cliquer sur le fichier, qui va directement être enregistré dans le dossier “Téléchargements”. Dans ce cas, allez dans le dossier “Téléchargements”, et déplacer votre fichier où vous souhaitez le mettre .
-
-- Sur d’autres machines, si vous cliquez dessus, il va s’ouvrir. Dans ce cas, essayez le clic droit de la souris => enregistrer la cible du lien sous… et enregistrez le fichier où vous souhaitez le mettre .
 
