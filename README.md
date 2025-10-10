@@ -16,6 +16,7 @@ Les instructions suivantes partent du principe que vous avez des connaissances d
 1. Pull le repo en ligne avant de commencer à travailler.
 1. Crée une branche basée sur `main` avec un nom explicit court (e.g. updated_chap1)
 1. Une fois les modifications réalisées, construisez le livre avec la commande `bookdown::render_book("index.Rmd", "bookdown::gitbook")`
+1. **n'utilisez pas `knit`pour voir vos changements**, à la place naviguez vers `index.html` (ici par exemple: `/Users/moi/Documents/GitHub/Rintro_bookdown/docs/index.html`) et double-cliquez
 1. Sélectionnez les modifications que vous désirez mettre sur GitHub
 1. Ajoutez un message clair puis vous pouvez `commit` les modifications
 1. Pour mettre vos modifications sur github, publiez votre branche.
