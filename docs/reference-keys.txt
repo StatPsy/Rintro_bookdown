@@ -5,7 +5,7 @@ installation-et-environnement-r-et-rstudio
 présentation-des-logiciels
 installation
 installation-et-gestion-des-packages
+environnement-de-travail
 organiser-ses-fichiers
 répertoire-de-travail
-définir-son-répertoire-de-travail-avec-setwd
-environnement-de-travail
+télécharger-un-fichier-sur-moodle

@@ -42,6 +42,22 @@ library(ggplot2)#idem
 ```
 
 
+## Environnement de travail
+
+Une fois que RStudio est lancé, une interface découpée en plusieurs zones se présente. Ces parties parties peuvent être redimensionnées, masquées ou maximisées selon vos préférences.
+
+```{r echo=FALSE}
+knitr::include_graphics("images/environnement.png")
+```
+
+Chacune des quatre zones a sa propre utilité:
+
+1.  Cette zone est dédiée aux fichiers sources. Ce volet permet d'écrire et de sauvegarder les lignes de code. Ce sera la partie la plus utilisée lors de la programmation. Un nouveau script peut être ouvert à partir de l'onglet `File` en haut à gauche de l'écran, puis `New File` et `R Script`. Chaque script peut être enregistré soit via le même onglet en choisissant `Save As`, soit en utilisant les raccourcis classiques de votre clavier.
+2.  Cette zone fournit des informations sur les objets, les variables et les données en mémoire sous l'onglet `Environment`.
+3.  La console est affichée en bas à gauche. Cette partie permet d'entrer et d'exécuter des instructions et voir les résultats s'afficher.
+4.  Cette zone permet de naviguer dans le répertoire de travail dans l'onglet `Files`, d'afficher les graphes réalisés dans l'onglet `Plots`, d'afficher les extensions/packages disponibles sous l'onglet `Packages` et également d'afficher l'aide (qui est très complète) sous l'onglet `Help`.
+
+
 ## Organiser ses fichiers
 
 Afin de gérer vos scripts et vos bases de données, nous vous proposons d'organiser vos fichiers au sein de dossiers étiquetés.
@@ -58,6 +74,7 @@ knitr::include_graphics("images/working_directory.png")
 
 Attention, si vous manquez d'assiduité dans votre organisation, vous allez multiplier les possibilités de mauvaises manipulations.
 
+
 ## Répertoire de travail
 
 Lorsque vous travaillez dans R studio, le logiciel a besoin de savoir quel est votre répertoire de travail (ou working directory en anglais). Si vous ne le spécifiez pas vous-même, R studio va simplement en choisir un par défaut.
@@ -68,38 +85,34 @@ Afin de connaître le répertoire de travail actuel, vous pouvez utiliser la fon
 getwd()
 ```
 
-```{r echo=FALSE}
-#setwd("~/Documents/assistanat/Statistique_I/")
-#getwd()
-```
-
 Nous vous conseillons de définir vous-même le répertoire de travail à chaque fois que vous commencez de travailler dans R, par exemple, en le spécifiant au début de vote script.
 
 Si vous avez créé un dossier pour le cours, alors vous pouvez l'utiliser comme répertoire de travail. Cela a de nombreux avantages et notamment vous permet d'accéder facilement aux bases de données.
 
-Pour définir ce répertoire de travail, deux alternatives sont à votre disposition, l'utilisation de la commande *setwd( )* ou passer par la création d'un projet R.
-
-### Définir son répertoire de travail avec *setwd( )*
-
-La commande *setwd( )* vous permet de définir le répertoire de travail. Une bonne pratique consiste à l'indiquer au début du script si vous travaillez avec un script.
+Pour définir ce répertoire de travail nous vous conseillons l'utilisation de la commande *setwd( )*. Elle vous permet de définir le répertoire de travail. Une bonne pratique consiste à l'indiquer au début du script si vous travaillez avec un script.
 
 A chaque fois que vous retournez sur R studio, vous devrez spécifier votre répertoire de travail.
 
-Pour ce faire, il suffit de copier le chemin qui mène au répertoire de travail à l'intérieur des parenthèses, comme dans l'exemple ci-dessous
-
-``` r
-setwd("~/Documents/assistanat/Statistique_I/")
+Pour ce faire, il suffit de copier le chemin qui mène au répertoire de travail à l'intérieur des parenthèses, comme dans l'exemple ci-dessous (remplacez ici "~/Documents/Statistique_I" par le chemin vers votre dossier et enlever les # au début des commandes):
+```{r echo=FALSE}
+#setwd("~/Documents/Statistique_I")
+#getwd()
 ```
+
 
 *RAPPEL, vous pouvez obtenir le chemin d'un dossier de la manière suivante:*
 
--   *Pour windows : [Obtain file path in windows 10](https://www.supportyourtech.com/articles/how-to-get-file-path-windows-10-easy-steps-to-find-your-file-locations/)*
+- *__Recommandé__: pour la plupart de vos ordinateurs il suffit de 1) cliquer une fois sur un dossier (ou poser la souris) que vous voulez utiliser, 2) d'appuyer sur ctrl+c (ou command + c sur mac), et 3) d'appuyer sur ctrl+v (ou command + v) directement dans votre script Rstudio (quadrant en haut, à gauche)*
+- *Sinon, pour windows : [Obtain file path in windows 10](https://www.supportyourtech.com/articles/how-to-get-file-path-windows-10-easy-steps-to-find-your-file-locations/)*
 
--   *Pour MAC : [Obtain file path on a Mac](https://macpaw.com/how-to/get-file-path-mac)*
+-   *Sinon, pour MAC : [Obtain file path on a Mac](https://macpaw.com/how-to/get-file-path-mac)*
 
--   *Pour linux : [Obtain file path in Linux command line](https://linuxhandbook.com/get-file-path/){.uri}*
+-   *Sinon, pour linux : [Obtain file path in Linux command line](https://linuxhandbook.com/get-file-path/){.uri}*
 
-Une fois que vous avez indiqué votre répertoire de travail par la fonction *setwd( )*, si vous avez une base de données dans le répertoire de travail, vous pourrez l'accéder directement.
+*Dans certains rare cas vous aurez à inverser les slashs "/" par des antislash "\"*
+
+Une fois que vous avez indiqué votre répertoire de travail par la fonction *setwd( )*, si vous avez une base de données dans le répertoire de travail, vous pourrez y accéder directement.
+
 
 Exemple 1 :
 
@@ -128,17 +141,11 @@ knitr::include_graphics("images/tab_path.png")
 
 </center>
 
-## Environnement de travail
+## Télécharger un fichier sur moodle
 
-Une fois que RStudio est lancé, une interface découpée en plusieurs zones se présente. Ces parties parties peuvent être redimensionnées, masquées ou maximisées selon vos préférences.
+Lorsque vous télécharger un fichier sur Moodle ne l'ouvrez pas avec Excel car ce dernier modifie les propriétés du fichier. Pour enregistrer le fichier au bon endroit:
 
-```{r echo=FALSE}
-knitr::include_graphics("images/environnement.png")
-```
+- Sur certaines machines il suffit de cliquer sur le fichier, qui va directement être enregistré dans le dossier “Téléchargements”. Dans ce cas, allez dans le dossier “Téléchargements”, et déplacer votre fichier où vous souhaitez le mettre .
 
-Chacune des quatre zones a sa propre utilité:
+- Sur d’autres machines, si vous cliquez dessus, il va s’ouvrir. Dans ce cas, essayez le clic droit de la souris => enregistrer la cible du lien sous… et enregistrez le fichier où vous souhaitez le mettre .
 
-1.  Cette zone est dédiée aux fichiers sources. Ce volet permet d'écrire et de sauvegarder les lignes de code. Ce sera la partie la plus utilisée lors de la programmation. Un nouveau script peut être ouvert à partir de l'onglet `File` en haut à gauche de l'écran, puis `New File` et `R Script`. Chaque script peut être enregistré soit via le même onglet en choisissant `Save As`, soit en utilisant les raccourcis classiques de votre clavier.
-2.  Cette zone fournit des informations sur les objets, les variables et les données en mémoire sous l'onglet `Environment`.
-3.  La console est affichée en bas à gauche. Cette partie permet d'entrer et d'exécuter des instructions et voir les résultats s'afficher.
-4.  Cette zone permet de naviguer dans le répertoire de travail dans l'onglet `Files`, d'afficher les graphes réalisés dans l'onglet `Plots`, d'afficher les extensions/packages disponibles sous l'onglet `Packages` et également d'afficher l'aide (qui est très complète) sous l'onglet `Help`.
