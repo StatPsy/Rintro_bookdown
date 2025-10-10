@@ -22,6 +22,6 @@ Les instructions suivantes partent du principe que vous avez des connaissances d
 1. Pour mettre vos modifications sur github, publiez votre branche.
 1. Naviguez vers le repo sur GitHub (https://github.com/StatPsy/Rintro_bookdown/)
 1. Cliquez sur Compare and pull request (bandeau jaune)
-1. Changez le `base repository` pour StatPsy 
+1. **important** Changez le `base repository` pour `main`dans StatPsy en vérifiant bien que vous ne pointez pas vers le bookdown original chez meganebollen/meganebollen.github.io
 1. decrivez les changements puis creer le pull request
 1. assignez un membre du repo comme reviewer et attendez l'évaluation avant l'intégration
