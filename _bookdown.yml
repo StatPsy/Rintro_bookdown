@@ -1,8 +1,8 @@
 rmd_files:
   - index.Rmd
   - 02-load_envR.Rmd
-#  - 03-object_operator.Rmd
-#  - 04-packages_data.Rmd
+  - 03-object_operator.Rmd
+  - 04-packages_data.Rmd
 #  - 05-description.Rmd
 #  - 06-distributions.Rmd
 #  - 07-loopFOR.Rmd
