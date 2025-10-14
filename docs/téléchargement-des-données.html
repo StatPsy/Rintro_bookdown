@@ -8,7 +8,7 @@
   <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
-  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapitre 4 Téléchargement des données | Guide R" />
   <meta property="og:type" content="book" />
@@ -29,7 +29,7 @@ set in the _output.yml file.</p>" />
 <meta name="author" content="Edité par l’équipe StatPsy, basé sur le document de Mégane Bollenrücher (https://github.com/meganebollen/meganebollen.github.io)" />
 
 
-<meta name="date" content="2025-10-10" />
+<meta name="date" content="2025-10-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -37,7 +37,7 @@ set in the _output.yml file.</p>" />
   
   
 <link rel="prev" href="objets-et-opérateurs.html"/>
-
+<link rel="next" href="description-des-données-quantitatives-et-qualitatives-test.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -61,8 +61,9 @@ set in the _output.yml file.</p>" />
 
 
 <style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -72,7 +73,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -179,6 +180,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.3" data-path="04-packages_data.html"><a href="#bases-de-donn%C3%A9es-issues-de-fichiers-externes"><i class="fa fa-check"></i><b>4.3</b> Bases de données issues de fichiers externes</a></li>
 <li class="chapter" data-level="4.4" data-path="04-packages_data.html"><a href="#t%C3%A9l%C3%A9charger-un-fichier-sur-moodle"><i class="fa fa-check"></i><b>4.4</b> Télécharger un fichier sur moodle</a></li>
 </ul></li>
+<li class="chapter" data-level="5" data-path="04-packages_data.html"><a href="#description-des-donn%C3%A9es-quantitatives-et-qualitatives-test"><i class="fa fa-check"></i><b>5</b> Description des données quantitatives et qualitatives test</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="04-packages_data.html"><a href="#description-num%C3%A9rique"><i class="fa fa-check"></i><b>5.1</b> Description numérique</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="description-des-données-quantitatives-et-qualitatives-test.html"><a href="description-des-données-quantitatives-et-qualitatives-test.html"><i class="fa fa-check"></i><b>5.1.1</b> Variables qualitatives</a></li>
+<li class="chapter" data-level="5.1.2" data-path="description-des-données-quantitatives-et-qualitatives-test.html"><a href="description-des-données-quantitatives-et-qualitatives-test.html#variables-quantitatives"><i class="fa fa-check"></i><b>5.1.2</b> Variables quantitatives</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="description-des-données-quantitatives-et-qualitatives-test.html"><a href="description-des-données-quantitatives-et-qualitatives-test.html#description-graphique"><i class="fa fa-check"></i><b>5.2</b> Description graphique</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="description-des-données-quantitatives-et-qualitatives-test.html"><a href="description-des-données-quantitatives-et-qualitatives-test.html#variables-qualitatives-1"><i class="fa fa-check"></i><b>5.2.1</b> Variables qualitatives</a></li>
+<li class="chapter" data-level="5.2.2" data-path="description-des-données-quantitatives-et-qualitatives-test.html"><a href="description-des-données-quantitatives-et-qualitatives-test.html#variables-quantitatives-1"><i class="fa fa-check"></i><b>5.2.2</b> Variables quantitatives</a></li>
+</ul></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -265,8 +279,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="objets-et-opérateurs.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="objets-et-opérateurs.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="description-des-données-quantitatives-et-qualitatives-test.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
