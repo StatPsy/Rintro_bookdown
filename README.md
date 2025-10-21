@@ -19,7 +19,7 @@ Les instructions suivantes partent du principe que vous avez des connaissances d
 1. **Dans Rstudio n'utilisez pas `knit`pour voir vos changements**, à la place naviguez vers `index.html` (ici par exemple: `/Users/moi/Documents/GitHub/Rintro_bookdown/docs/index.html`) et double-cliquez
 1. Dans github desktop de nouveau: Sélectionnez les modifications que vous désirez mettre sur GitHub
 1. Ajoutez un message clair puis vous pouvez `commit` les modifications
-1. Pour mettre vos modifications sur github, publiez votre branche.
+1. Pour mettre vos modifications sur github, publiez votre branche (en haut a gauche).
 1. Naviguez vers le repo sur GitHub (https://github.com/StatPsy/Rintro_bookdown/)
 1. Cliquez sur Compare and pull request (bandeau jaune)
 1. **important** Changez le `base repository` pour `main`dans StatPsy en vérifiant bien que vous ne pointez pas vers le bookdown original chez meganebollen/meganebollen.github.io

@@ -21,3 +21,10 @@ bases-de-données-issues-de-la-base-de-r-ou-des-packages
 bases-de-données-issues-dans-un-fichier-.rdata
 bases-de-données-issues-de-fichiers-externes
 télécharger-un-fichier-sur-moodle
+description-des-données-quantitatives-et-qualitatives
+description-numérique
+variables-qualitatives
+variables-quantitatives
+description-graphique
+variables-qualitatives-1
+variables-quantitatives-1
