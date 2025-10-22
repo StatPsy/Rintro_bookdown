@@ -5,10 +5,10 @@ Ce deuxième chapitre regroupe quelques fonctions pour décrire numériquement e
 ```{r echo=TRUE}
 
 df <- read.csv("sport.csv", sep = ";", header = TRUE)
-str(df)
+head(df)
 ```
 
-On observe qu'il existe plusieurs types de variables. 
+Avec la commande head on affiche les premières lignes du jeu de données que nous venons d'importer. On observe qu'il existe plusieurs types de variables. 
 
 ## Description numérique
 
@@ -34,6 +34,7 @@ table(df$Sexe)
 table(df$Satisfaction)
 table(df$Sexe, df$Satisfaction)
 ```
+
 ### Variables quantitatives 
 
 Les variables quantitatives sont généralement décrites à l'aide de: 
