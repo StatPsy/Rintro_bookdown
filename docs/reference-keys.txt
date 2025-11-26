@@ -28,3 +28,6 @@ variables-quantitatives
 description-graphique
 variables-qualitatives-1
 variables-quantitatives-1
+distribution-de-probabilités
+distribution-normale
+distribution-de-student
