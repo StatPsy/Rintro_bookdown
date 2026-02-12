@@ -60,8 +60,8 @@ d
 Un vecteur est un objet qui permet de stocker une liste ordonnée d'éléments. Les éléments d'un vecteur doivent être du même type. Pour pouvoir stocker une information dans un seul objet, il faut utiliser la fonction `c()` qui permet de combiner les arguments de la fonction.
 
 ```{r}
-# Vecteur vide de taille 12
-vide <- c(rep(NA, 12))
+# Vecteur vide de taille 8
+vide <- c(rep(NA, 8))
 vide
 ```
 
