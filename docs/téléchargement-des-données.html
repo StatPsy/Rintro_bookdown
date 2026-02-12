@@ -29,7 +29,7 @@ set in the _output.yml file.</p>" />
 <meta name="author" content="Edité par l’équipe StatPsy, basé sur le document de Mégane Bollenrücher (https://github.com/meganebollen/meganebollen.github.io)" />
 
 
-<meta name="date" content="2025-11-26" />
+<meta name="date" content="2026-02-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -229,7 +229,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="bases-de-données-issues-de-la-base-de-r-ou-des-packages" class="section level2 hasAnchor" number="4.1">
 <h2><span class="header-section-number">4.1</span> Bases de données issues de la base de R ou des packages<a href="téléchargement-des-données.html#bases-de-donn%C3%A9es-issues-de-la-base-de-r-ou-des-packages" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Le code suivant permet d’importer le jeu de données “iris” disponible de base dans R.</p>
-<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="téléchargement-des-données.html#cb93-1" tabindex="-1"></a><span class="fu">data</span>(iris)</span></code></pre></div>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="téléchargement-des-données.html#cb95-1" tabindex="-1"></a><span class="fu">data</span>(iris)</span></code></pre></div>
 <p>Un objet <code>iris</code> apparait dans l’environnement du projet comme le montre la figure suivante.</p>
 <p><img src="images/environment_forDataDownload.png" /><!-- --></p>
 <p>Si les données sont dans un package, le package doit être importé au préalable.</p>
@@ -237,7 +237,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="bases-de-données-issues-dans-un-fichier-.rdata" class="section level2 hasAnchor" number="4.2">
 <h2><span class="header-section-number">4.2</span> Bases de données issues dans un fichier .RData<a href="téléchargement-des-données.html#bases-de-donn%C3%A9es-issues-dans-un-fichier-.rdata" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Les fichiers <code>.RData</code> sont spécifique au language R et peuvent contenir plusieurs objets en un seul fichier. Pour importer des données, il faut utiliser la fonction <code>load()</code></p>
-<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="téléchargement-des-données.html#cb94-1" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;04-data.RData&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="téléchargement-des-données.html#cb96-1" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;04-data.RData&quot;</span>)</span></code></pre></div>
 <p>Tous les objets importés sont chargés dans l’environnement de travail.</p>
 <p><img src="images/environment_forRDataDownload.png" /><!-- --></p>
 </div>
@@ -250,8 +250,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><code>dec</code> qui est le séparateur décimal. Cet argument est mis par défaut à <code>.</code>.</li>
 </ol>
 <p>Le seul argument obligatoire est le chemin d’accès au fichier à lire. Il n’est pas nécessaire de spécifier le chemin complet si le fichier à lire se trouve dans le dossier du projet. Si ce n’est pas le cas, vous devez spécifier le chemin d’accès complet à partir de ce qui a été fait avec la fonction <code>setwd()</code>. Pour charger une base de donnée nommé <code>04-data.csv</code> dont les valeurs sont séparées par des virgules, il suffit d’écrire la ligne suivante:</p>
-<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="téléchargement-des-données.html#cb95-1" tabindex="-1"></a>csv_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;04-data.csv&quot;</span>)</span>
-<span id="cb95-2"><a href="téléchargement-des-données.html#cb95-2" tabindex="-1"></a>csv_data</span></code></pre></div>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="téléchargement-des-données.html#cb97-1" tabindex="-1"></a>csv_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;04-data.csv&quot;</span>)</span>
+<span id="cb97-2"><a href="téléchargement-des-données.html#cb97-2" tabindex="-1"></a>csv_data</span></code></pre></div>
 <pre><code>##      Nom Age Note.1 Note.2
 ## 1   Marc  18    5.0   5.50
 ## 2   Anne  20    6.0   4.00
@@ -259,8 +259,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 4   Jean  17    3.5   5.00
 ## 5 Sophie  18    5.0   4.75</code></pre>
 <p>Pour charger une base de donnée nommé <code>04-data.txt</code> dont les valeurs sont séparées par des points-virgules, il suffit d’écrire comme dans la ligne suivante en n’oubliant pas de sécifier le caractère de séparation avec l’argument <code>sep=";"</code>.</p>
-<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="téléchargement-des-données.html#cb97-1" tabindex="-1"></a>txt_data <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">&quot;04-data.txt&quot;</span>, <span class="at">sep =</span> <span class="st">&quot;;&quot;</span>, <span class="at">header =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb97-2"><a href="téléchargement-des-données.html#cb97-2" tabindex="-1"></a>txt_data</span></code></pre></div>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="téléchargement-des-données.html#cb99-1" tabindex="-1"></a>txt_data <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">&quot;04-data.txt&quot;</span>, <span class="at">sep =</span> <span class="st">&quot;;&quot;</span>, <span class="at">header =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb99-2"><a href="téléchargement-des-données.html#cb99-2" tabindex="-1"></a>txt_data</span></code></pre></div>
 <pre><code>##      Nom Age Note.1 Note.2
 ## 1   Marc  18    5.0   5.50
 ## 2   Anne  20    6.0   4.00
