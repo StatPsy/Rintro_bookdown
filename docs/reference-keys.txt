@@ -38,3 +38,8 @@ afficher
 itérer
 créer-un-vecteur
 parcourir-une-matrice
+les-tests-statistiques
+le-test-de-student-pour-un-échantillon
+le-test-de-student-pour-deux-échantillons-indépendants
+le-test-de-student-pour-échantillons-appariés
+la-puissance-dun-test-de-student
